@@ -98,11 +98,21 @@ export const stats: Stat[] = [
 
 export const experience: ExperienceEntry[] = [
   {
+    org: "Innovate Technologies",
+    role: "Software Developer",
+    location: "Kathmandu, Nepal",
+    start: "Apr 2026",
+    end: "Present",
+    type: "ENGINEERING",
+    summary:
+      "NestJS/Express + PostgreSQL full-stack, building secure distributed applications; Redis-backed rate limiting, ACID-safe bulk data pipelines, GraphQL/gRPC service integration, React/TanStack Query frontends, and automated event-driven workflows.",
+  },
+  {
     org: "FiveOne",
     role: "Software Developer",
     location: "Kathmandu, Nepal",
     start: "Aug 2025",
-    end: "Present",
+    end: "Apr 2026", //change
     type: "ENGINEERING",
     summary:
       "Modular NestJS + MongoDB backend (ports-and-adapters) powering a real-time social platform; REST + WebSocket sync for AI events, game state, and chat; OpenAI-powered conversational features (+25–35% session engagement); Firebase Auth/Analytics/Messaging.",
@@ -207,6 +217,29 @@ export const projects: Project[] = [
       "FastAPI",
     ],
     href: "https://anyani.netlify.app/",
+  },
+  {
+    title: "FiveOne — Gamified Dating App",
+    stack: [
+      "React Native",
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "WebSockets",
+      "GPT (LLM)",
+    ],
+    href: "https://fiveone.app/",
+  },
+  {
+    title: "mySecondTeacher — Curriculum-Aligned Learning Platform",
+    stack: ["React", ".NET", "Webhooks", "Redis"],
+    href: "https://www.mysecondteacher.com.np/",
+  },
+  {
+    title: "HomeschoolAsia — IGCSE & A-Level Exam Prep Platform",
+    stack: ["React", ".NET", "Webhooks", "Redis"],
+    href: "https://homeschool.asia/",
   },
 ];
 

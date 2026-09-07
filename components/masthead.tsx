@@ -5,7 +5,13 @@ import { motion, useReducedMotion } from "motion/react";
 import { Section } from "@/components/section";
 import { Button } from "@/components/button";
 import { profile, contact, cvPath } from "@/data/resume";
-import { GithubIcon, LinkedinIcon, MailIcon, FileIcon, DownloadIcon } from "@/components/icons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  FileIcon,
+  DownloadIcon,
+} from "@/components/icons";
 
 let cachedNowMs = Date.now();
 
@@ -26,7 +32,11 @@ function getClockServerSnapshot() {
 }
 
 function LiveDateline() {
-  const nowMs = useSyncExternalStore(subscribeClock, getClockSnapshot, getClockServerSnapshot);
+  const nowMs = useSyncExternalStore(
+    subscribeClock,
+    getClockSnapshot,
+    getClockServerSnapshot,
+  );
   const now = nowMs ? new Date(nowMs) : null;
 
   const date = now
@@ -100,10 +110,19 @@ export function Masthead() {
         transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="mt-10 flex flex-wrap items-center gap-3"
       >
-        <Button href={cvPath} target="_blank" rel="noopener noreferrer" variant="primary">
+        <Button
+          href={cvPath}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="primary"
+        >
           <FileIcon width={14} height={14} /> Read CV
         </Button>
-        <Button href={cvPath} download="Ashutosh_Pradhan_CV.pdf" variant="secondary">
+        <Button
+          href={cvPath}
+          download="Ashutosh_Pradhan_CV.pdf"
+          variant="secondary"
+        >
           <DownloadIcon width={14} height={14} /> Download CV
         </Button>
       </motion.div>
@@ -120,7 +139,9 @@ export function Masthead() {
           className="group flex min-h-11 items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
         >
           <GithubIcon width={15} height={15} />
-          <span className="underline-offset-4 group-hover:underline">GitHub</span>
+          <span className="underline-offset-4 group-hover:underline">
+            GitHub
+          </span>
         </a>
         <a
           href={contact.linkedin}
@@ -129,14 +150,18 @@ export function Masthead() {
           className="group flex min-h-11 items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
         >
           <LinkedinIcon width={15} height={15} />
-          <span className="underline-offset-4 group-hover:underline">LinkedIn</span>
+          <span className="underline-offset-4 group-hover:underline">
+            LinkedIn
+          </span>
         </a>
         <a
           href={`mailto:${contact.email}`}
           className="group flex min-h-11 items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
         >
           <MailIcon width={15} height={15} />
-          <span className="underline-offset-4 group-hover:underline">Email</span>
+          <span className="underline-offset-4 group-hover:underline">
+            Email
+          </span>
         </a>
       </motion.div>
     </Section>
